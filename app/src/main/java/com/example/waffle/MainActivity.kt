@@ -13,6 +13,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.example.waffle.composable.WaffleCard
 import com.example.waffle.ui.theme.WaffleTheme
 import com.example.waffle.composables.WalletConnectButton
 import dagger.hilt.android.AndroidEntryPoint
@@ -38,6 +39,7 @@ class MainActivity : ComponentActivity() {
                             identityName = application.getString(R.string.app_name),
                             activityResultSender = activityResultSender,
                             modifier = Modifier.align(Alignment.End))
+                        WaffleCard(modifier = Modifier.fillMaxSize())
                     }
                 }
             }
